@@ -1,1 +1,105 @@
 @import "./reset.scss";
+
+body {
+  background-color: #7d49a9;
+  height: 100vh;
+  padding: 50px 50px 0px 50px;
+}
+
+.container {
+  background-color: #191919;
+  height: 100%;
+  padding: 20px;
+  .contents {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 5px;
+  }
+  .content:first-child {
+    background-color: white;
+    height: 100%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: 0.25fr 1fr 0.5fr;
+    padding: 0px 20px;
+    .content__first-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header-title {
+        font-weight: bold;
+        font-size: 5rem;
+      }
+      .header-group {
+        .header-rate {
+          margin-right: 15px;
+          font-size: 1.2rem;
+        }
+        .header-review {
+          text-transform: uppercase;
+          border: 1px solid white;
+          border-radius: 15px;
+          background-color: #fec830;
+          padding: 5px 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .content__first-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 10rem;
+      border-bottom: 1px solid black;
+    }
+    .content__first-footer {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+  .content:nth-child(2) {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    .content__second-img {
+      background-image: url("/images/image1.png");
+      background-size: cover;
+      border-radius: 15px;
+    }
+    .content__second-tab1 {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background-color: #fec830;
+      align-items: center;
+      border-radius: 15px;
+      margin-top: 5px;
+      .tab1-left {
+        border-radius: 50%;
+        background-color: black;
+        height: 15px;
+      }
+      .tab1-rights {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .content__second-tab2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-radius: 15px;
+      transform: rotate(5deg);
+      .tab2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+  }
+}
