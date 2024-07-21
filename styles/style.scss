@@ -6,6 +6,15 @@ $circleSecond: #ff8100;
 $circleThird: #c7c2cb;
 $circleFourth: #acbaaf;
 
+@keyframes loading {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 body {
   width: 100%;
   height: 160vh;
@@ -196,5 +205,101 @@ main {
         opacity: 0.7;
       }
     }
+  }
+  .content:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 3 / -1;
+    background-color: black;
+    color: white;
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .content-fourth-title {
+      white-space: nowrap;
+      display: inline-block;
+      animation: loading 10s linear infinite;
+    }
+  }
+
+  .content:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    .content-fifth-title {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 30px;
+    }
+    .content-fifth-subtitle {
+      opacity: 0.5;
+      font-weight: normal;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+  }
+
+  .content:nth-child(6) {
+    background-image: url("/images/image2.png");
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .content:nth-child(7) {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    .content-seventh-title {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    .content-seventh-subtitle {
+      opacity: 0.5;
+      margin-top: 15px;
+    }
+  }
+
+  .content:nth-child(8) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    grid-column: 5 / -1;
+    grid-row: 3 / 4;
+    background-color: #c7c2c9;
+    .content-eighth-box {
+      width: 250px;
+      height: 220px;
+      border: 2px solid black;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .box-title {
+        font-size: 30px;
+      }
+      .read-more {
+        text-decoration: underline;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .content:nth-child(9) {
+    grid-column: 2 / 5;
+    grid-row: 4 / -1;
   }
 }
