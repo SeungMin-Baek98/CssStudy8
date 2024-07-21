@@ -301,5 +301,42 @@ main {
   .content:nth-child(9) {
     grid-column: 2 / 5;
     grid-row: 4 / -1;
+    padding: 5px 20px;
+    border-right: 1px solid black;
+
+    .content-ninth-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ninth-title {
+      text-transform: uppercase;
+      font-size: 10rem;
+      transform: scaleX(2.2);
+    }
+
+    .content-ninth-subtitle {
+      overflow-y: scroll;
+      height: calc(160vh - 1138px);
+    }
+  }
+
+  .content:nth-child(10) {
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    .content-tenth-title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      font-size: 30px;
+      gap: 10px;
+    }
+    .content-tenth-subtitle {
+      height: c;
+      overflow-y: scroll;
+      height: calc(160vh - 1100px);
+    }
   }
 }
